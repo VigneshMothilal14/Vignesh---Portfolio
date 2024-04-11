@@ -125,7 +125,7 @@ h2{
 
 @media screen and (max-width: 390px) {
     h2 {
-        padding-top: 4em;
+        padding-top: 6em;
     }
 }
 h2:hover{
@@ -593,9 +593,9 @@ video:hover{
 
 /* FOR CONTACT ME FORM */
 
-@media screen and (min-width: 360px) {
+@media screen and (min-width: 361px) {
     #name, #mailid, #message{
-        width: 20em;
+        width: 22em;
     }
 }
 
