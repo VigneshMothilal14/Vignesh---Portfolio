@@ -1,0 +1,673 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: hsla(33, 100%, 94%, 0.538);
+    background-image: linear-gradient(to right, pink, rgb(251, 211, 136));
+}
+
+/* 1. NAVIGATION BAR STYLING */
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 3em;
+    margin: .5em;
+} 
+.nav-bar{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid gray;
+    min-height: 3em;
+    width: 100%;
+    background-color: whitesmoke;
+    box-shadow: 5px 5px 10px gray;
+    animation: jumping 2s forwards;
+    position: fixed;
+    top: 0em;
+    background-color: whitesmoke;
+}
+
+@media screen and (max-width:390px) {
+    .nav-bar { flex-wrap: wrap; }
+}
+.nav-items {
+    margin: .5em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 1s;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-items:hover {
+    color: blue;
+    border-bottom: 2px solid red;
+}
+
+.nav-items:active{
+  transform: translateY(15px);
+  transition-duration: 1s;
+}
+@keyframes jumping {
+    0% { transform: translateY(-100px); }
+
+    90% { transform: translateY(5px); }
+
+    100% { transform: translateY(0); }
+} 
+
+@media screen and (max-width: 430px) {
+    .nav-bar{ display:flex;
+              flex-direction: row;
+              justify-content: center;
+    }
+
+    .nav{ margin-bottom: 8em; }
+}
+
+/* 2. PROFILE PHOTO STYLING */
+
+.profilephoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.profilephoto img {
+    border-radius: 10%;
+    box-shadow: 2px 2px 10px gray;
+    border: 2px solid white;
+    animation: profilejump 1s;
+}
+.caption {
+    display: flex;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: blue;
+    animation: profilecaptionjump 1s;
+}
+.caption:hover {
+    text-decoration: underline;
+}
+
+@keyframes profilejump{
+    0% { transform: translateY(-200px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes profilecaptionjump {
+    0% { transform: translateX(-100px);}
+    100% { transform: translateX(0); }
+}
+
+@media screen and (min-width:430px) {
+    .nav { margin:4em; } 
+}
+
+
+/* 3. INTRODUCTION STYLING */
+
+/* here onwards h2 tag is common for side headings */
+
+h2{
+    padding-top: 3em;
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+@media screen and (max-width: 390px) {
+    h2 {
+        padding-top: 4em;
+    }
+}
+h2:hover{
+    text-decoration: underline;
+}
+
+.originalIntro-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 2em;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.intro-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+    border-bottom: 1px solid gray;
+    padding-bottom: 5px;
+}
+
+@media screen and (max-width: 400px) {
+    .intro-text {
+        font-size: .8em;
+    }
+}
+
+
+.web-developer-word, .front-end-skills-words, .back-end-skills-words{
+    background-image: linear-gradient(to left,rgb(6, 6, 231),rgb(0, 132, 0),rgb(232, 2, 2));
+    color: transparent; 
+    background-clip: text;
+    font-weight: bold;
+}
+
+/* 3. EDUCATION  STYLING */
+
+.originaleducation-Content  {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 2em;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.tenthstd, .twelevthstd, .ug{
+    border: 1px solid gray;
+    padding: 10px;
+    margin-bottom: 1em;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 1em;
+    flex: 1,1,1;
+    box-shadow: 5px 5px 10px gray;
+    transition: transform .5s;
+
+}
+.tenthstd:hover, .twelevthstd:hover, .ug:hover {
+    transform: translatey(-20px);
+}
+
+h4 { text-align: center; 
+    color:crimson;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.eduactionsideheading { 
+    font-weight: bold;
+    background-image: linear-gradient(to right, red,blue, green);
+    color: transparent;
+    background-clip: text;
+}
+
+.edu-rem-details {
+    font-size: 1.1em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 1000px) {
+    .originaleducation-Content{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .edu-rem-details {
+        font-size: .8em;
+    } 
+}
+
+
+/* SKILLS STYLING */
+.actuallSKill {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 2em;
+    box-shadow: 5px 5px 10px gray;
+}
+
+.frontendSkill, .backendSkill, .softSkill, .versioncontroSkill {
+    border: 1px solid gray;
+    padding: 20px;
+    margin-bottom: 1em;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    flex: 1;
+    box-shadow: 5px 5px 10px gray;
+    margin: 1em;
+    width:80%;
+    transition: transform .5s;
+}
+
+.frontendSkill:hover, .backendSkill:hover, .softSkill:hover, .versioncontroSkill:hover {
+    transform: translatey(-20px);
+}
+@media screen and (max-width: 1000px) {
+    .actuallSKill {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.skillHeading {
+    color:crimson;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: flex-start;
+}
+.skill{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1em;
+}
+
+/* PROJECT STYLING */
+.originalproject-Content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 2em;
+    box-shadow: 5px 5px 10px gray;
+}
+
+h3 {
+    color: blueviolet;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.atm-sideheadings {
+    color:crimson;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.demo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.GithubLink {
+    text-decoration: none;
+    margin: 1em;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    translate: transform 1s;
+
+}
+.GithubLink:hover{
+    color: blue;
+    border-bottom: 2px solid red;
+    font-weight: bold;
+   
+}
+
+.GithubLink:active{
+  transform: translatex(100px);
+  transition-duration: 1s;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+video { transition: transform 1s; }
+video:hover{
+    background-color: whitesmoke;
+    transform: translatex(-10px);
+    transition-duration: 1s;
+}
+
+/* EXTRA PROJECT DEPOLLUTION AND MINI TATI HELPER STYLING */
+
+.extra-project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 2em;
+    box-shadow: 5px 5px 10px gray;
+    flex: 1;
+}
+
+.depollution-sideheading, .minitati-sideheading {
+    color:crimson;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.extraPro {
+    display: flex;
+    flex-direction: row;
+}
+
+.utubevideo a  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #4E65FF ,  #92EFFD);
+    gap: 20px
+}
+
+.utubevideo a:hover {
+    box-shadow: 5px 5px 10px gray;
+    background-image: linear-gradient(to left, yellow, white);
+}
+
+.imageofExtraProjects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: .5em;
+} 
+@media screen and (max-width: 990px) {
+        .extraPro {
+            display: flex;
+            flex-direction: column;
+        }
+}
+@media screen and (min-width: 988px) {
+    .imageofExtraProjects {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .imageofExtraProjects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .img{ padding: .8em; } 
+}
+/* @media screen and (max-width: 1000px){
+    .imageofExtraProjects {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .img{ padding: 10px; }    
+} */
+
+/* CONTACT STYLING */
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+/* particularly designed for resume class */
+.resume a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gray;
+    padding: 5px;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, #4E65FF ,  #92EFFD);
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: black;
+    gap: 10px;
+}
+.resume a:hover {
+    box-shadow: 5px 5px 10px gray;
+    background-image: linear-gradient(to left, yellow, white);
+}
+
+.resume a:active {
+    transform: translatex(100px);
+    transition-duration: 1s;
+}
+
+.origialcontactinfos {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-content: space-around;
+    border: 1px solid gray;
+    border-radius: 30px;
+    margin: .5em;
+}
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    border: 1px solid gray;
+    padding:10px;
+    border-radius: 30px;
+    background-color: whitesmoke;
+    margin: 2em;
+    box-shadow: 5px 5px 10px gray;
+    flex: 1;
+}
+
+.origialcontactinfos {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    min-height: 100px;
+}
+
+.sidecontactinfo {
+    color:crimson;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.origialcontactinfos a {
+    text-decoration: none;
+    margin: .5em;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+.origialcontactinfos a:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.origialcontactinfos a:active{
+  transform: translatex(100px);
+  transition-duration: 1s;
+}
+
+@media screen and (max-width: 536px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 331px) {
+    .origialcontactinfos {
+        border: none;
+    }
+}
+/* CONTACT FORMS */
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    padding:10px;
+    border-radius: 30px;
+    margin: 2em;
+    flex: 1;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    justify-content: flex-start;
+}
+
+.contactmeheading{
+    display: flex;
+    justify-content: center;
+    color:black;
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.labels {
+    margin-bottom: 1em;
+    margin-top: .5em;
+    color:black;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#name, #mailid, #message{
+    padding: 1em;
+    border-radius: 30px;
+    width: 500px;
+}
+
+#name:hover, #mailid:hover, #message:hover{
+        box-shadow: 5px 15px 10px white;
+}
+
+#name::placeholder, #mailid::placeholder, #message::placeholder{
+    color:blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+} 
+
+/* FOR CONTACT ME FORM */
+
+@media screen and (min-width: 360px) {
+    #name, #mailid, #message{
+        width: 20em;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #name, #mailid, #message{
+        width: 15em;
+    }
+}
+
+.forms button {
+    margin: 1em;
+    width: 12em;
+    display: flex;
+    justify-content: center;
+}
+
+.submitbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em;
+}
+
+#btn{
+    display: flex;
+    padding: 1em;
+    gap: 10px;
+    flex-direction: row;
+    border-radius: 30px;
+    border: 2px solid blue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    align-items: center;
+    background-image: linear-gradient(to right, #4E65FF ,  #92EFFD);
+    cursor: pointer;
+}
+
+#btn:hover {
+    box-shadow: 5px 5px 10px gray;
+    background-image: linear-gradient(to left, yellow, white);
+}
+#btn:active {
+    transform: translatex(100px);
+    transition-duration: 1s;
+}
+
+
+
+/* FOOTER STYLING */
+.icons {
+    display: flex;
+    justify-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid black;
+}
+
+.icons a { font-size: 1.5em; 
+           transition: transform .5s;}
+
+.icons a:hover {
+    transform: translateY(-5px);
+    transition-duration: .5s;
+}
+
+#instagramLink { color: #E4405F; }
+
+#linkedInLink { color: #0A66C2; }
+
+#gitHubLink { color : #24292e; }
+
+/* for icon spacing */
+.skill {
+    gap: 20px
+}
